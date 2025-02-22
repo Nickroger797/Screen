@@ -6,9 +6,9 @@ import os
 import mimetypes
 
 # Replace these values with your own
-api_id = ""
-api_hash = ""
-bot_token = ""
+api_id = int(os.getenv("API_ID", "0"))  # Default to 0 if not set
+api_hash = os.getenv("API_HASH", "")
+bot_token = os.getenv("BOT_TOKEN", "")
 
 app = Client("screenshot_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
